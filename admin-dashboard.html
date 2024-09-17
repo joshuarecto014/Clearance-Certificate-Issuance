@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="admin-dashboard-style.css">
+  <link rel="stylesheet" href="admin-sidebar-style.css">
+  <link rel="stylesheet" href="admin-navbar-style.css">
+  <link rel="stylesheet" href="Application-management-style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">Logo</div>
+    <ul class="nav-links">
+      <li><a href="#"><i class="fa-solid fa-inbox"></i></a></li>
+      <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+    </ul>
+  </nav>
+
+  
+    <div id="sidebar" class="sidebar">
+                <a href="javascript:void(0)" class="toggle-btn" onclick="toggleSidebar()">
+                    <span class="toggle-text">Collapse menu</span>
+                    <i id="toggle-icon" class="fas fa-arrow-right"></i>
+                </a>
+        <div class="sidebar-links">
+            <a href="#"><i class="fas fa-columns"></i><span class="link-text">Dashboard</span></a>
+
+      <!-- Dropdown button -->
+            <a href="javascript:void(0)" class="dropdown-btn" onclick="toggleDropdown('doc-issuance-dropdown')">
+                <i class="fas fa-file-alt"></i><span class="link-text">Document Issuance</span>
+                <i class="fas fa-caret-down dropdown-icon"></i> <!-- Dropdown icon -->
+            </a>
+
+            
+
+                 <!-- Dropdown container of Document issuance -->
+            <ul id="doc-issuance-dropdown" class="dropdown-container">
+                <li><a href="javascript:void(0)" onclick="showSection('application-management')">Application Management</a></li>
+                <li><a href="#">Renewal Management</a></li>
+                <li><a href="#">Approval & Signing Management</a></li>
+            </ul>
+
+
+        <!-- Dropdown button -->
+            <a href="javascript:void(0)" class="dropdown-btn" onclick="toggleDropdown('cer-management-dropdown')">
+                <i class="fas fa-list-check"></i> <span class="link-text">Certificate Management</span>
+                <i class="fas fa-caret-down dropdown-icon"></i> <!-- Dropdown icon -->
+            </a>
+
+
+        <!-- Dropdown container of certificate management issuance -->
+            <ul id="cer-management-dropdown" class="dropdown-container">
+                <li><a href="">Certificate types & Categories</a></li>
+                <li><a href="#">Document Management</a></li>
+                <li><a href="#">Archived</a></li>
+            </ul>
+
+
+                <a href="#"><i class="fas fa-solid fa-chart-line"></i><span class="link-text">Status and report</span></a>
+        </div>
+
+            <hr>
+                <a class="help" href="#"><i class="fa fa-question-circle"></i><span class="link-text">Help</span></a>
+                <a class="logout" href="login.html"><i class="fas fa-sign-out"></i><span class="link-text">Logout</span></a>
+    </div>
+
+
+
+
+    <div class="content">
+        <div class="heading-body">
+            <hr>
+                <div class="datetime-container">
+                    <div id="date" class="date"></div>
+                    <div id="time" class="time"></div>
+                </div>               
+                <h2>Overview Dashboard</h2>
+            <hr>
+        </div>
+        <div id="dashboard-content" class="dashboard-body">
+            <div class="quick-links">
+                <h4>Quick View Today :</h4>
+                <ul>
+                    <li><a href="#">Today Requests</a><br><p>50</p></li>
+                    <li><a href="#">Pending Request</a><br><p>50</p></li>
+                    <li><a href="#">Request Overall</a><br><p>100</p></li>
+                </ul>
+            </div>
+            <div class="overviews">            
+                <div class="column" id="overview">
+                    <p>Request Overview</p>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Document Name</th>
+                            <th>Code</th>
+                            <th>Type</th>
+                            <th>Date Issued</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sample Docs 1</td>
+                                <td>DOC001</td>
+                                <td>PDF</td>
+                                <td>2024-09-14</td>
+                                <td><i class="fa fa-check"></i></td>
+                                <td>approved</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sample Docs 2</td>
+                                <td>DOC002</td>
+                                <td>PDF</td>
+                                <td>2024-09-14</td>
+                                <td><i class="fa-solid fa-hourglass"></i></td>
+                                <td>pending</td>
+                            </tr>
+                            <tr></tr>
+                                <td>3</td>
+                                <td>Sample Docs 3</td>
+                                <td>DOC003</td>
+                                <td>PDF</td>
+                                <td>2024-09-14</td>
+                                <td><i class="fa-solid fa-ban"></i></td>
+                                <td>denied</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="see-more">see more</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="content" id="application-management-content">
+        <div class="heading-body">
+            <hr>
+                <div class="datetime-container">
+                    <div id="date" class="date"></div>
+                    <div id="time" class="time"></div>
+                </div>               
+                <h2>Application Management</h2>
+            <hr>
+        </div>
+        <div id="application-management" class="application-body">
+           
+            <div class="overviews">            
+                <div class="column" id="overview">
+                    <p>Request Overview</p>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Document Name</th>
+                            <th>Code</th>
+                            <th>File</th>
+                            <th>Date Issued</th>
+                            <th>Action</th>
+                            
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sample Docs 1</td>
+                                <td>DOC001</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td><button class="action-btn approve">Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                             
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sample Docs 2</td>
+                                <td>DOC002</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td><button class="action-btn approve">Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                               
+                            </tr>
+                            <tr></tr>
+                                <td>3</td>
+                                <td>Sample Docs 3</td>
+                                <td>DOC003</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td>
+                                    <button class="action-btn approve">Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Sample Docs 1</td>
+                                <td>DOC001</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td><button class="action-btn approve">Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                             
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sample Docs 2</td>
+                                <td>DOC002</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td><button class="action-btn approve">Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                               
+                            </tr>
+                            <tr></tr>
+                                <td>3</td>
+                                <td>Sample Docs 3</td>
+                                <td>DOC003</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td>
+                                    <button class="action-btn approve">Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="see-more">see more</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="admin-script.js"></script>
+    <script src="admin-sidebar-script.js"></script>
+    <script src="application-management-script.js"></script>
+</body>
+
+</html>

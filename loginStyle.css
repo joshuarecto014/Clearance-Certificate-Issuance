@@ -1,0 +1,201 @@
+/* General styles */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.welcome {
+  background-color: #f8eeee;
+  text-align: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.welcome p {
+  font-size: 5vw; 
+  margin-top: 10px;
+}
+
+.welcome img {
+  width: 12vw;
+  max-width: 80px; 
+}
+
+.login-container {
+  /* margin-top: 10px;  */
+  width: 100%;
+  max-width: 500px; 
+  margin-bottom: 20px; 
+}
+
+form {
+  position: relative;
+  background-color: #D9D9D9;
+  border-radius: 20px; 
+  padding: 5%; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+form h1 {
+  font-size: 5vh; 
+  margin-bottom: 20px;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px; 
+}
+
+.input-container input {
+  width: 100%;
+  padding: 12px; 
+  border: 2px solid #ccc;
+  border-radius: 12px; 
+  outline: none;
+  margin: 15px 0; 
+  font-size: 16px; 
+  position: relative;
+  background-color: #D9D9D9;
+}
+
+.input-container label {
+  position: absolute;
+  left: 20px; 
+  top: 35px; 
+  background-color: #D9D9D9;
+  padding: 0 5px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-size: 16px; /* Adjust as needed */
+}
+
+/* Floating label when input is focused or has value */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: 10px; 
+  left: 20px;
+  font-size: 12px; /* Adjust as needed */
+  color: #333;
+  background-color: #D9D9D9;
+}
+
+button {
+  background-color: #519298;
+  color: #fff;
+  border: none;
+  padding: 12px; 
+  width: 50%; 
+  border-radius: 10px;
+  font-size: 18px; 
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.login-container a {
+  margin-top: 10px;
+  display: block;
+  text-align: center;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.line-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #000;
+}
+
+.line-container label {
+  font-size: 3vh; 
+  margin: 0 10px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.icon-container img {
+  display: block;
+  padding: 0% 5px;
+  width: 10%; 
+  height: auto; 
+}
+
+/* Media Queries for Responsiveness */
+@media (min-width: 768px) {
+  body {
+    flex-direction: row;
+    padding: 0 20px;
+  }
+
+  .welcome {
+    width: 45%;
+  }
+
+  .login-container {
+    transform: translateX(-50px) translateY(-65px); 
+  }
+
+  .welcome p {
+    font-size: 4vw; 
+  }
+
+  .login-container {
+    width: 40%;
+    max-width: 600px; 
+    margin-top: 150px; 
+  }
+
+  .icon-container img {
+    display: block;
+    width: 15%;
+    padding: 0% 10px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .welcome p {
+    font-size: 3.5vw; 
+  }
+
+  form h1 {
+    font-size: 6vh; 
+  }
+
+  input[type="text"], input[type="password"] {
+    padding: 15px; 
+    font-size: 18px; 
+  }
+
+  button {
+    font-size: 20px; 
+  }
+}
