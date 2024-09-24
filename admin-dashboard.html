@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="admin-sidebar-style.css">
   <link rel="stylesheet" href="admin-navbar-style.css">
   <link rel="stylesheet" href="Application-management-style.css">
+  <link rel="stylesheet" href="renewal-management-style.css">
 </head>
+
 <body>
   <nav class="navbar">
     <div class="logo">Logo</div>
@@ -23,8 +25,7 @@
     <div id="sidebar" class="sidebar">
                  <a href="javascript:void(0)" class="toggle-btn" onclick="toggleSidebar()">
                  <span class="toggle-text">Collapse menu</span>
-                 <i id="toggle-icon" class="fas fa-arrow-right"></i></a>
-                        
+                 <i id="toggle-icon" class="fas fa-arrow-right"></i></a>              
         <div class="sidebar-links">
             <a href="javascript:void(0)" onclick="showDashboard()"><i class="fas fa-columns"></i><span class="link-text">Dashboard</span></a>
             <!-- Dropdown button -->
@@ -34,7 +35,7 @@
                  <!-- Dropdown container of Document issuance -->
             <ul id="doc-issuance-dropdown" class="dropdown-container">
                 <li><a href="javascript:void(0)" onclick="showSection('application-management-content')">Application Management</a></li>
-                <li><a href="#">Renewal Management</a></li>
+                <li><a href="javascript:void(0)" onclick="showSection('renewal-management-content')">Renewal Management</a></li>
                 <li><a href="#">Approval & Signing Management</a></li>
             </ul>
         <!-- Dropdown button -->
@@ -44,7 +45,6 @@
         <!-- Dropdown container of certificate management issuance -->
             <ul id="cer-management-dropdown" class="dropdown-container">
                 <li><a href="#">Certificate types & Categories</a></li>
-                <li><a href="#">Document Management</a></li>
                 <li><a href="#">Archived</a></li>
             </ul>
                 <a href="#"><i class="fas fa-solid fa-chart-line"></i><span class="link-text">Status and report</span></a>
@@ -186,6 +186,114 @@
             </div>
         </div>
     </div>
+
+
+
+    <div class="content" id="renewal-management-content">
+        <div class="heading-body">
+            <hr>
+                <div class="datetime-container">
+                    <div id="date" class="date"></div>
+                    <div id="time" class="time"></div>
+                </div>               
+                <h2>Renewal Management</h2>
+            <hr>
+        </div>
+        <div id="" class="renewal-body">
+           
+            <div class="overviews">            
+                <div class="column" id="overview">
+                    <p>Request Overview</p>
+                    <table>
+                        <tr>
+                            <th>ID</th>
+                            <th>Document Name</th>
+                            <th>Code</th>
+                            <th>File</th>
+                            <th>Date Issued</th>
+                            <th>Action</th>
+                            
+                        </tr>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Sample Docs 1</td>
+                                <td>DOC001</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td><button class="action-btn approve">Re-Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                             
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sample Docs 2</td>
+                                <td>DOC002</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td><button class="action-btn approve">Re-Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                               
+                            </tr>
+                            <tr></tr>
+                                <td>3</td>
+                                <td>Sample Docs 3</td>
+                                <td>DOC003</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td>
+                                    <button class="action-btn approve">Re-Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Sample Docs 1</td>
+                                <td>DOC001</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td><button class="action-btn approve">Re-Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                             
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Sample Docs 2</td>
+                                <td>DOC002</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td><button class="action-btn approve">Re-Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                               
+                            </tr>
+                            <tr></tr>
+                                <td>3</td>
+                                <td>Sample Docs 3</td>
+                                <td>DOC003</td>
+                                <td><a href="">VIEW</a></td>
+                                <td>2024-09-14</td>
+                                <td>
+                                    <button class="action-btn approve">Re-Approve</button>
+                                    <button class="action-btn reject">Reject</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <a href="#" class="see-more">see more</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
 
 
 

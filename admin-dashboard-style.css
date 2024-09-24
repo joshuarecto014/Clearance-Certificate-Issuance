@@ -113,7 +113,7 @@ body {
 }
 
 
-.content .dashboard-body, .application-body{
+.content .dashboard-body, .application-body, .renewal-body{
     background-color: #e0e0e08f;
     margin: 10px;
     padding: 5px 0;
@@ -121,7 +121,7 @@ body {
     height: auto;
 }
 
-.content .dashboard-body ul p, .application-body ul p{
+.content .dashboard-body ul p, .application-body ul p, .renewal-body ul p{
     margin-top: 5px;
 }
 

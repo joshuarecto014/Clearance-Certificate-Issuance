@@ -1,0 +1,34 @@
+#renewal-management-content{
+    display: none;
+    
+    }
+    
+    
+    .action-btn {
+        padding: 5px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    
+    /* Approve Button */
+    .action-btn.approve {
+        background-color: #4CAF50;
+        color: white;
+    }
+    
+    .action-btn.approve:hover {
+        background-color: #45a049;
+    }
+    
+    /* Reject Button */
+    .action-btn.reject {
+        background-color: #f44336;
+        color: white;
+    }
+    
+    .action-btn.reject:hover {
+        background-color: #d32f2f;
+    }
