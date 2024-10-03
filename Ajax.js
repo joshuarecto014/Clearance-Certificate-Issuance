@@ -1,16 +1,25 @@
 function loadContent(page) {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      // Hide the dashboard content and overview
-      document.getElementById("dashboard-content").style.display = "none";
-      document.getElementById("overview-dashboard").style.display = "none";
+    if (this.readyState == 4) {
+      if (this.status == 200) {
+        console.log("Hiding dashboard and overview");
+        document.getElementById("dashboard-content").style.display = "none"; 
+        document.getElementById("overview-dashboard").style.display = "none"; 
+        
+        // This should hide the chart row since it's part of dashboard-content
+        var chartRow = document.getElementById("chart");
+        if (chartRow) {
+          chartRow.style.display = "none"; 
+          console.log("Chart row hidden");
+        }
 
-      // Load the new content into dynamic-content and show it
-      document.getElementById("dynamic-content").innerHTML = this.responseText;
-      document.getElementById("dynamic-content").style.display = "block"; // Make dynamic content visible
-    } else if (this.readyState == 4 && this.status != 200) {
-      console.error('Failed to load content from ' + page + '.html');
+        document.getElementById("dynamic-content").innerHTML = this.responseText;
+        document.getElementById("dynamic-content").style.display = "block"; 
+        console.log("Dynamic content loaded and displayed");
+      } else {
+        console.error('Failed to load content from ' + page + '.html');
+      }
     }
   };
 
@@ -19,16 +28,25 @@ function loadContent(page) {
 }
 
 function showDashboard() {
-  // Hide any loaded dynamic content
+  console.log("Showing dashboard");
+  
+  // Hide dynamic content
   document.getElementById("dynamic-content").style.display = "none";
-  document.getElementById("dynamic-content").innerHTML = "";  // Clear the dynamic content
+  document.getElementById("dynamic-content").innerHTML = ""; 
 
-  // Show the dashboard content and overview
+  // Show dashboard content and overview
   document.getElementById("dashboard-content").style.display = "block";
   document.getElementById("overview-dashboard").style.display = "block";
+
+  // Show the chart row
+  var chartRow = document.getElementById("chart");
+  if (chartRow) {
+    chartRow.style.display = "flex"; 
+    console.log("Chart row shown");
+  }
 }
 
 // Load default dashboard content on page load
 window.onload = function() {
-  showDashboard();  // Show the dashboard by default
+  showDashboard(); // Show the dashboard by default
 };

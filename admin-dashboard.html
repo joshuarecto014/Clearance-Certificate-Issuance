@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="admin-dashboard-style.css" />
     <link rel="stylesheet" href="admin-sidebar-style.css" />
     <link rel="stylesheet" href="admin-navbar-style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
   <body>
@@ -72,13 +73,9 @@
         >
           <i class="fas fa-list-check"></i>
           <span class="link-text">Certificate Management</span>
-          <i class="fas fa-caret-down dropdown-icon"></i
-        ></a>
+        </a>
         <!-- Dropdown container of certificate management issuance -->
-        <ul id="cer-management-dropdown" class="dropdown-container">
-          <li><a href="#">Certificate types & Categories</a></li>
-          <li><a href="#">Archived</a></li>
-        </ul>
+
         <a href="#"
           ><i class="fas fa-solid fa-chart-line"></i
           ><span class="link-text">Status and report</span></a
@@ -125,6 +122,17 @@
             </li>
           </ul>
         </div>
+        <div class="chart-row" id="chart">
+          <div class="chart-container">
+            <h1>REQUEST</h1>
+            <canvas id="pieChart"></canvas>
+          </div>
+
+          <div class="chart-container">
+            <h1>REQUEST</h1>
+            <canvas id="barChart"></canvas>
+          </div>
+        </div>
       </div>
 
       <div class="content">
@@ -132,8 +140,12 @@
         <!-- Dynamic content will load here -->
       </div>
     </div>
+
+    <div id="modalContainer"></div>
+
     <script src="admin-script.js"></script>
     <script src="admin-sidebar-script.js"></script>
     <script src="Ajax.js"></script>
+    <script src="modal-script.js"></script>
   </body>
 </html>

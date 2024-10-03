@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="sub-module-style.css">
     <link rel="stylesheet" href="admin-dashboard-style.css">
+    <link rel="stylesheet" href="modal-style.css">
+
     <title>Application</title>
   </head>
   <body>
 
    
       <div class="heading-body">
-          <hr>
-              <div class="datetime-container">
-                  <div id="date" class="date"></div>
-                  <div id="time" class="time"></div>
-              </div>               
               <h2>Application Management</h2>
-          <hr>
       </div>
       <div id="application-management" class="application-body">
          
@@ -28,6 +24,7 @@
                       <tr>
                           <th>ID</th>
                           <th>Document Name</th>
+                          <th>Document Type</th>
                           <th>Code</th>
                           <th>File</th>
                           <th>Date Issued</th>
@@ -38,77 +35,79 @@
                           <tr>
                               <td>1</td>
                               <td>Sample Docs 1</td>
+                              <td>Barangay certificate</td>
                               <td>DOC001</td>
-                              <td><a href="">VIEW</a></td>
+                              <td><a href="#">VIEW</a></td>
                               <td>2024-09-14</td>
-                              <td><button class="action-btn approve">Approve</button>
-                                  <button class="action-btn reject">Reject</button>
-                              </td>
+                              <td>
+                                <button class="action-btn">View</button>
+                            </td>
                            
                           </tr>
                           <tr>
                               <td>2</td>
                               <td>Sample Docs 2</td>
+                              <td>Barangay indigency</td>
                               <td>DOC002</td>
-                              <td><a href="">VIEW</a></td>
+                              <td><a href="#">VIEW</a></td>
                               <td>2024-09-14</td>
-                              <td><button class="action-btn approve">Approve</button>
-                                  <button class="action-btn reject">Reject</button>
-                              </td>
+                              <td>
+                                <button class="action-btn">View</button>
+                            </td>
                              
                           </tr>
                           <tr></tr>
                               <td>3</td>
                               <td>Sample Docs 3</td>
+                              <td>Barangay certificate</td>
                               <td>DOC003</td>
-                              <td><a href="">VIEW</a></td>
+                              <td><a href="#">VIEW</a></td>
                               <td>2024-09-14</td>
                               <td>
-                                  <button class="action-btn approve">Approve</button>
-                                  <button class="action-btn reject">Reject</button>
-                              </td>
+                                <button class="action-btn">View</button>
+                            </td>
                           </tr>
                           <tr>
                               <td>1</td>
                               <td>Sample Docs 1</td>
+                              <td>Barangay indigency</td>
                               <td>DOC001</td>
-                              <td><a href="">VIEW</a></td>
+                              <td><a href="#">VIEW</a></td>
                               <td>2024-09-14</td>
-                              <td><button class="action-btn approve">Approve</button>
-                                  <button class="action-btn reject">Reject</button>
-                              </td>
-                           
+                              <td>
+                                <button class="action-btn">View</button>
+                            </td>
                           </tr>
                           <tr>
                               <td>2</td>
                               <td>Sample Docs 2</td>
+                              <td>Barangay certificate</td>
                               <td>DOC002</td>
-                              <td><a href="">VIEW</a></td>
+                              <td><a href="#">VIEW</a></td>
                               <td>2024-09-14</td>
-                              <td><button class="action-btn approve">Approve</button>
-                                  <button class="action-btn reject">Reject</button>
-                              </td>
+                              <td>
+                                <button class="action-btn">View</button>
+                            </td>
                              
                           </tr>
                           <tr></tr>
                               <td>3</td>
                               <td>Sample Docs 3</td>
+                              <td>Barangay certificate</td>
                               <td>DOC003</td>
-                              <td><a href="">VIEW</a></td>
+                              <td><a href="#">VIEW</a></td>
                               <td>2024-09-14</td>
                               <td>
-                                  <button class="action-btn approve">Approve</button>
-                                  <button class="action-btn reject">Reject</button>
+                                <button class="action-btn">View</button>
                               </td>
                           </tr>
                       </tbody>
                   </table>
-                  <a href="#" class="see-more">see more</a>
               </div>
               
           </div>
       </div>
-
-
+      <div id="modalContainer"></div> <!-- Empty div to load modal content -->
+      <script src="modal-script.js"></script> <!-- Your script for handling modal -->
   </body>
 </html>

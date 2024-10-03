@@ -9,21 +9,11 @@
 }
 
 /* Approve Button */
-.action-btn.approve {
-    background-color: #4CAF50;
+.action-btn {
+    background-color: #2b98e6;
     color: white;
 }
 
-.action-btn.approve:hover {
-    background-color: #45a049;
-}
-
-/* Reject Button */
-.action-btn.reject {
-    background-color: #f44336;
-    color: white;
-}
-
-.action-btn.reject:hover {
-    background-color: #d32f2f;
+.action-btn:hover {
+    background-color: #0f1cae;
 }
