@@ -13,11 +13,11 @@ function loadContent(page) {
       // Re-apply event listeners after content is loaded
       applyViewButtonListeners();
     } else if (this.readyState == 4 && this.status != 200) {
-      console.error('Failed to load content from ' + page + '.html');
+      console.error('Failed to load content from ' + page + '.php');
     }
   };
 
-  xhttp.open("GET", page + ".html", true);
+  xhttp.open("GET", page + ".php", true);
   xhttp.send();
 }
 
@@ -33,7 +33,7 @@ function applyViewButtonListeners() {
 
 function loadModal() {
   const xhr = new XMLHttpRequest();
-  xhr.open("GET", "modal.html", true);
+  xhr.open("GET", "modal.php", true);
   xhr.onload = function () {
     if (xhr.status === 200) {
       // Insert modal HTML into the page

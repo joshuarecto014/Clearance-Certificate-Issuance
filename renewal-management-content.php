@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renewal</title>
     <link rel="stylesheet" href="sub-module-style.css">
-   
+    <link rel="stylesheet" href="modal-style.css">
+
 
 </head>
 <body>
@@ -103,7 +104,7 @@
 
 
 
-
+        <script src="modal-script.js"></script> <!-- Your script for handling modal -->
 
 </body>
 </html>

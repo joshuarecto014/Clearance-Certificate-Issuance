@@ -63,13 +63,11 @@
               >Renewal Management</a
             >
           </li>
-          <li><a href="#">Approval & Signing Management</a></li>
         </ul>
         <!-- Dropdown button -->
         <a
           href="javascript:void(0)"
-          class="dropdown-btn"
-          onclick="toggleDropdown('cer-management-dropdown')"
+          onclick="loadContent('certificate-management-content')"
         >
           <i class="fas fa-list-check"></i>
           <span class="link-text">Certificate Management</span>

@@ -121,8 +121,8 @@ body {
   height: auto;
 }
 
-.content .application-body,
-.renewal-body {
+.application-body,
+.renewal-body, .certificate-body {
   background-color: #e0e0e08f;
   margin: 10px;
   padding: 5px 0;
@@ -132,7 +132,7 @@ body {
 
 .content .dashboard-body ul p,
 .application-body ul p,
-.renewal-body ul p {
+.renewal-body ul p, .certificate-body ul p {
   margin-top: 5px;
 }
 

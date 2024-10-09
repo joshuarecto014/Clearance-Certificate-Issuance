@@ -18,12 +18,12 @@ function loadContent(page) {
         document.getElementById("dynamic-content").style.display = "block"; 
         console.log("Dynamic content loaded and displayed");
       } else {
-        console.error('Failed to load content from ' + page + '.html');
+        console.error('Failed to load content from ' + page + '.php');
       }
     }
   };
 
-  xhttp.open("GET", page + ".html", true);
+  xhttp.open("GET","Capstone/" + page + ".php", true); 
   xhttp.send();
 }
 
