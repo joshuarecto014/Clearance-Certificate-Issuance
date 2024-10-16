@@ -6,14 +6,37 @@
     cursor: pointer;
     margin-right: 5px;
     font-size: 12px;
-}
-
-/* Approve Button */
-.action-btn {
     background-color: #2b98e6;
     color: white;
 }
 
+/* Approve Button */
+
+
 .action-btn:hover {
     background-color: #0f1cae;
+}
+
+
+.btn-approve {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+    background-color: #28a745;
+    color: white;
+}
+  
+
+.btn-disapprove {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 12px;
+    background-color: #dc3545;
+    color: rgb(255, 255, 255);
 }

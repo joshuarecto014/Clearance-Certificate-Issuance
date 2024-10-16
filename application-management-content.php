@@ -39,7 +39,39 @@
               
           </div>
       </div>
+
+      <!-- Modal HTML here, so it is part of the main page -->
+<div id="manageDetailsModal" class="modal">
+  <div class="modal-content">
+          <div class="modal-header">
+            <span class="modal-title">Manage Details</span>
+            <button class="btn-close" id="closeModalBtn">&times;</button>
+          </div>
+      <div class="modal-body">
+            <form id="manageDetailsForm">
+
+            
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" class="form-control" disabled />
+
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" class="form-control" disabled />
+
+              <label for="middleName">Middle Name</label>
+              <input type="text" id="middleName" class="form-control" disabled />
+
+              <label for="contactNumber">Contact Number</label>
+              <input type="text" id="contactNumber" class="form-control" disabled />
+
+              <label for="purpose">Purpose</label>
+              <input type="text" id="purpose" class="form-control" disabled />
+           </form>
+       </div>
+  </div>
+</div>
       
-      <script src="modal-script.js"></script> <!-- Your script for handling modal -->
+      <script src="modal-script.js"></script> 
+
+
   </body>
 </html>

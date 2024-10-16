@@ -31,70 +31,7 @@
                             
                         </tr>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Sample Docs 1</td>
-                                <td>DOC001</td>
-                                <td><a href="">VIEW</a></td>
-                                <td>2024-09-14</td>
-                                <td>
-                                    <button class="action-btn">View</button>
-                                </td>
-                             
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Sample Docs 2</td>
-                                <td>DOC002</td>
-                                <td><a href="">VIEW</a></td>
-                                <td>2024-09-14</td>
-                                <td>
-                                    <button class="action-btn">View</button>
-                                </td>
-                               
-                            </tr>
-                            <tr></tr>
-                                <td>3</td>
-                                <td>Sample Docs 3</td>
-                                <td>DOC003</td>
-                                <td><a href="">VIEW</a></td>
-                                <td>2024-09-14</td>
-                                <td>
-                                    <button class="action-btn">View</button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Sample Docs 1</td>
-                                <td>DOC001</td>
-                                <td><a href="">VIEW</a></td>
-                                <td>2024-09-14</td>
-                                <td>
-                                    <button class="action-btn">View</button>
-                                </td>
-                             
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Sample Docs 2</td>
-                                <td>DOC002</td>
-                                <td><a href="">VIEW</a></td>
-                                <td>2024-09-14</td>
-                                <td>
-                                    <button class="action-btn">View</button>
-                                </td>
-                               
-                            </tr>
-                            <tr></tr>
-                                <td>3</td>
-                                <td>Sample Docs 3</td>
-                                <td>DOC003</td>
-                                <td><a href="">VIEW</a></td>
-                                <td>2024-09-14</td>
-                                <td>
-                                    <button class="action-btn">View</button>
-                                </td>
-                            </tr>
+                        <?php include 'fetch_renewals.php'; ?>
                         </tbody>
                     </table>
                 </div>

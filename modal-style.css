@@ -21,6 +21,7 @@
   z-index: 10000; /* Ensure content is above the modal overlay */
 }
 
+
 #closeModalBtn {
   color: #aaa;
   float: right;
@@ -53,15 +54,7 @@
   cursor: pointer;
 }
 
-.btn-approve {
-  background-color: #28a745;
-  color: white;
-}
 
-.btn-disapprove {
-  background-color: #dc3545;
-  color: white;
-}
 
 
 .form-control {
@@ -77,3 +70,4 @@ label {
   font-weight: bold;
   margin-bottom: 5px;
 }
+

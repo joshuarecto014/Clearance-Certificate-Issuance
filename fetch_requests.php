@@ -1,9 +1,9 @@
 <?php
 // Database credentials
-$servername = "localhost"; // Your database server (e.g., localhost)
-$username = "root"; // Your database username
-$password = ""; // Your database password
-$dbname = "certificate_issuance"; // Your database name
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "certificate_issuance";
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,20 +14,27 @@ if ($conn->connect_error) {
 }
 
 // Query to get data from requests table
-$sql = "SELECT ID, `Document name`, `Document type`, Code, `Date issued` FROM requests";
+$sql = "SELECT ID, documentName, documentType, code, dateIssued, lastName, firstName, middleName, contactNum, purpose FROM requests";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Output data of each row in the table
     while ($row = $result->fetch_assoc()) {
-        echo "<tr>";
+        echo "<tr 
+              data-id='" . $row['ID'] . "' 
+              data-lastname='" . $row['lastName'] . "' 
+              data-firstname='" . $row['firstName'] . "' 
+              data-middlename='" . $row['middleName'] . "' 
+              data-contactnum='" . $row['contactNum'] . "' 
+              data-purpose='" . $row['purpose'] . "'>";
+
         echo "<td>" . $row['ID'] . "</td>";
-        echo "<td>" . $row['Document name'] . "</td>";
-        echo "<td>" . $row['Document type'] . "</td>";
-        echo "<td>" . $row['Code'] . "</td>";
-        echo "<td><a href='#'>VIEW</a></td>"; // Adjust the link to match your file viewer
-        echo "<td>" . $row['Date issued'] . "</td>";
+        echo "<td>" . $row['documentName'] . "</td>";
+        echo "<td>" . $row['documentType'] . "</td>";
+        echo "<td>" . $row['code'] . "</td>";
         echo "<td><button class='action-btn'>View</button></td>";
+        echo "<td>" . $row['dateIssued'] . "</td>";
+        echo "<td><button class='btn-approve'>Approve</button> <button class='btn-disapprove'>Reject</button></td>";
         echo "</tr>";
     }
 } else {
@@ -35,4 +42,6 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
+
+
 ?>
