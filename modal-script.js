@@ -134,6 +134,52 @@ function applyApproveButtonListeners() {
   });
 }
 
+
+
+
+
+
+// Function to apply reject button event listeners
+function applyRejectButtonListeners() {
+  const rejectButtons = document.querySelectorAll('.btn-disapprove');
+
+  rejectButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      // Get the closest table row to retrieve the relevant data
+      const row = this.closest('tr');
+      const id = row.getAttribute('data-id');
+
+      // Confirm rejection
+      if (confirm('Are you sure you want to reject this request?')) {
+        // Send the ID to the PHP script via AJAX
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            try {
+              var response = JSON.parse(this.responseText);
+              if (response.success) {
+                alert('Request rejected successfully!');
+                row.remove(); // Remove the rejected row from the table
+              } else {
+                alert('Error: ' + response.message);
+              }
+            } catch (e) {
+              console.error('Invalid JSON response:', this.responseText);
+              alert('An error occurred, please check the console for more details.');
+            }
+          }
+        };
+        xhttp.open("POST", "reject_request.php", true);
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xhttp.send("id=" + id);
+      }
+    });
+  });
+}
+
+
+
+
 // Re-apply event listeners after content is loaded
 function applyViewButtonListeners() {
   const viewButtons = document.querySelectorAll('.action-btn');
@@ -174,5 +220,7 @@ function applyViewButtonListeners() {
       }
     });
   });
+
   applyApproveButtonListeners(); // Ensure approve buttons are set up as well
+  applyRejectButtonListeners(); // Ensure reject buttons are set up as well
 }
