@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="admin-dashboard-style.css" />
     <link rel="stylesheet" href="admin-sidebar-style.css" />
     <link rel="stylesheet" href="admin-navbar-style.css" />
+    <link rel="stylesheet" href="upload_template.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
 
@@ -102,7 +103,25 @@
         </div>
       </div>
 
+      
+
+
+
+
+
       <div id="dashboard-content" class="dashboard-body">
+
+          <form action="upload_template.php" method="POST" enctype="multipart/form-data" id="uploadForm">
+                <!-- Hidden file input -->
+                <input type="file" name="file" id="file" accept=".doc,.docx" style="display:none;" required>
+                
+                <!-- Custom button to trigger file input -->
+                <button type="button" id="uploadButton" class="btn-upload">+ ADD</button>
+                
+                <!-- Hidden submit button -->
+                <button type="submit" id="submitBtn" style="display:none;"></button>
+            </form>
+
         <div class="quick-links">
           <h4>Quick View Today :</h4>
           <ul>
@@ -143,6 +162,8 @@
     <div id="modalContainer"></div>
   
 
+
+    <script src="upload_template.js"></script>
     <script src="admin-script.js"></script>
     <script src="admin-sidebar-script.js"></script>
     <script src="Ajax.js"></script>

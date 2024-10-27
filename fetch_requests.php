@@ -13,27 +13,29 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Query to get data from requests table
-$sql = "SELECT ID, documentName, documentType, code, dateIssued, lastName, firstName, middleName, contactNum, purpose FROM requests";
+// Query to get data from the updated requests table
+$sql = "SELECT id, first_name, last_name, middle_name, civil_status, place_of_birth, gender, address, id_file, tracking_id, contact, purpose, clearance_type, id_number, date_issued, date_of_birth FROM requests";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // Output data of each row in the table
     while ($row = $result->fetch_assoc()) {
         echo "<tr 
-              data-id='" . $row['ID'] . "' 
-              data-lastname='" . $row['lastName'] . "' 
-              data-firstname='" . $row['firstName'] . "' 
-              data-middlename='" . $row['middleName'] . "' 
-              data-contactnum='" . $row['contactNum'] . "' 
-              data-purpose='" . $row['purpose'] . "'>";
+                data-id='" . $row['id'] . "' 
+                data-lastname='" . $row['last_name'] . "' 
+                data-firstname='" . $row['first_name'] . "' 
+                data-middlename='" . $row['middle_name'] . "' 
+                data-contactnum='" . $row['contact'] . "' 
+                data-purpose='" . $row['purpose'] . "' 
+                data-address='" . $row['address'] . "' 
+                data-placeofbirth='" . $row['place_of_birth'] . "' 
+                data-civilstatus='" . $row['civil_status'] . "'>";
 
-        echo "<td>" . $row['ID'] . "</td>";
-        echo "<td>" . $row['documentName'] . "</td>";
-        echo "<td>" . $row['documentType'] . "</td>";
-        echo "<td>" . $row['code'] . "</td>";
+        echo "<td>" . $row['id'] . "</td>";
+        echo "<td>" . $row['clearance_type'] . "</td>";
+        echo "<td>" . $row['tracking_id'] . "</td>";
         echo "<td><button class='action-btn'>View</button></td>";
-        echo "<td>" . $row['dateIssued'] . "</td>";
+        echo "<td>" . $row['date_issued'] . "</td>";
         echo "<td><button class='btn-approve'>Approve</button> <button class='btn-disapprove'>Reject</button></td>";
         echo "</tr>";
     }
@@ -42,6 +44,4 @@ if ($result->num_rows > 0) {
 }
 
 $conn->close();
-
-
 ?>

@@ -1,0 +1,27 @@
+
+.dashboard-body #uploadForm{
+  position: relative;
+  right: -90%;
+  background-color: #000000;  /* Green background */
+  width: 0px;
+}
+
+.dashboard-body .btn-upload {
+    background-color: #0ab5e9;  /* Green background */
+    border: none;
+    color: white; /* White text */
+    padding: 12px 24px; /* Padding */
+    margin-left: 5px;
+    text-align: center;
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer on hover */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    width: 100px;
+  }
+  
+
+  .btn-upload:hover {
+    background-color: #095384; /* Darker green on hover */
+  }
+  

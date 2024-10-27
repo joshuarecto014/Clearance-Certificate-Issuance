@@ -135,3 +135,7 @@ updateDateTime();
   barChart.config.data.datasets[0].backgroundColor = barChart.config.data.datasets[0].backgroundColor.map(color => {
       return color.replace(/0.6/, '0.9'); // Make colors slightly more solid for 3D effect
   });
+
+
+
+ 

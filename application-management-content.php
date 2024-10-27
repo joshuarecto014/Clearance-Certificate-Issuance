@@ -25,7 +25,6 @@
                           <th>ID</th>
                           <th>Document Name</th>
                           <th>Document Type</th>
-                          <th>Code</th>
                           <th>File</th>
                           <th>Date Issued</th>
                           <th>Action</th>
@@ -48,24 +47,25 @@
             <button class="btn-close" id="closeModalBtn">&times;</button>
           </div>
       <div class="modal-body">
-            <form id="manageDetailsForm">
+      <form id="manageDetailsForm">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" class="form-control" disabled />
 
-            
-              <label for="lastName">Last Name</label>
-              <input type="text" id="lastName" class="form-control" disabled />
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" class="form-control" disabled />
 
-              <label for="firstName">First Name</label>
-              <input type="text" id="firstName" class="form-control" disabled />
+        <label for="middleName">Middle Name</label>
+        <input type="text" id="middleName" class="form-control" disabled />
 
-              <label for="middleName">Middle Name</label>
-              <input type="text" id="middleName" class="form-control" disabled />
+        <label for="contactNumber">Contact Number</label>
+        <input type="text" id="contactNumber" class="form-control" disabled />
 
-              <label for="contactNumber">Contact Number</label>
-              <input type="text" id="contactNumber" class="form-control" disabled />
+        <label for="purpose">Purpose</label>
+        <input type="text" id="purpose" class="form-control" disabled />
 
-              <label for="purpose">Purpose</label>
-              <input type="text" id="purpose" class="form-control" disabled />
-           </form>
+        <label for="address">Address</label>
+        <input type="text" id="address" class="form-control" disabled /> <!-- Address Field -->
+      </form>
        </div>
   </div>
 </div>

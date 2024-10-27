@@ -1,7 +1,3 @@
-
-
-
-// Function to apply view button event listeners
 function applyViewButtonListeners() {
   const viewButtons = document.querySelectorAll('.action-btn');
 
@@ -14,6 +10,7 @@ function applyViewButtonListeners() {
       const middleName = row.getAttribute('data-middlename');
       const contactNum = row.getAttribute('data-contactnum');
       const purpose = row.getAttribute('data-purpose');
+      const address = row.getAttribute('data-address'); // Retrieve address
 
       // Get modal elements
       const lastNameField = document.getElementById('lastName');
@@ -21,15 +18,17 @@ function applyViewButtonListeners() {
       const middleNameField = document.getElementById('middleName');
       const contactNumberField = document.getElementById('contactNumber');
       const purposeField = document.getElementById('purpose');
+      const addressField = document.getElementById('address'); // Get address field
 
       // Check if the modal elements exist before setting values
-      if (lastNameField && firstNameField && middleNameField && contactNumberField && purposeField) {
+      if (lastNameField && firstNameField && middleNameField && contactNumberField && purposeField && addressField) {
         // Set the modal values
         lastNameField.value = lastName;
         firstNameField.value = firstName;
         middleNameField.value = middleName;
         contactNumberField.value = contactNum;
         purposeField.value = purpose;
+        addressField.value = address; // Set the address value
 
         // Show the modal
         const modal = document.getElementById('manageDetailsModal');
@@ -193,6 +192,7 @@ function applyViewButtonListeners() {
       const middleName = row.getAttribute('data-middlename');
       const contactNum = row.getAttribute('data-contactnum');
       const purpose = row.getAttribute('data-purpose');
+      const address = row.getAttribute('data-address'); // Retrieve address
 
       // Get modal elements
       const lastNameField = document.getElementById('lastName');
@@ -200,15 +200,17 @@ function applyViewButtonListeners() {
       const middleNameField = document.getElementById('middleName');
       const contactNumberField = document.getElementById('contactNumber');
       const purposeField = document.getElementById('purpose');
+      const addressField = document.getElementById('address'); // Get address field
 
       // Check if the modal elements exist before setting values
-      if (lastNameField && firstNameField && middleNameField && contactNumberField && purposeField) {
+      if (lastNameField && firstNameField && middleNameField && contactNumberField && purposeField && addressField) {
         // Set the modal values
         lastNameField.value = lastName;
         firstNameField.value = firstName;
         middleNameField.value = middleName;
         contactNumberField.value = contactNum;
         purposeField.value = purpose;
+        addressField.value = address; // Set the address value
 
         // Show the modal
         const modal = document.getElementById('manageDetailsModal');
