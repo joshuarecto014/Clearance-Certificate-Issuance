@@ -64,7 +64,19 @@
         <input type="text" id="purpose" class="form-control" disabled />
 
         <label for="address">Address</label>
-        <input type="text" id="address" class="form-control" disabled /> <!-- Address Field -->
+        <input type="text" id="address" class="form-control" disabled /> 
+       
+        <label for="civilStatus">Civil Status</label>
+        <input type="text" id="civilStatus" class="form-control" disabled />
+
+        <label for="placeOfBirth">Place of Birth</label>
+        <input type="text" id="placeOfBirth" class="form-control" disabled />
+
+        <label for="gender">Gender</label>
+        <input type="text" id="gender" class="form-control" disabled />
+
+        <label for="dateOfBirth">Date of Birth</label>
+        <input type="text" id="dateOfBirth" class="form-control" disabled />
       </form>
        </div>
   </div>

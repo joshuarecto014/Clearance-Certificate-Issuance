@@ -18,18 +18,19 @@ $sql = "SELECT id, first_name, last_name, middle_name, civil_status, place_of_bi
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // Output data of each row in the table
     while ($row = $result->fetch_assoc()) {
         echo "<tr 
-                data-id='" . $row['id'] . "' 
-                data-lastname='" . $row['last_name'] . "' 
-                data-firstname='" . $row['first_name'] . "' 
-                data-middlename='" . $row['middle_name'] . "' 
-                data-contactnum='" . $row['contact'] . "' 
-                data-purpose='" . $row['purpose'] . "' 
-                data-address='" . $row['address'] . "' 
-                data-placeofbirth='" . $row['place_of_birth'] . "' 
-                data-civilstatus='" . $row['civil_status'] . "'>";
+        data-id='" . $row['id'] . "' 
+        data-lastname='" . $row['last_name'] . "' 
+        data-firstname='" . $row['first_name'] . "' 
+        data-middlename='" . $row['middle_name'] . "' 
+        data-contactnum='" . $row['contact'] . "' 
+        data-purpose='" . $row['purpose'] . "' 
+        data-address='" . $row['address'] . "' 
+        data-placeofbirth='" . $row['place_of_birth'] . "' 
+        data-civilstatus='" . $row['civil_status'] . "' 
+        data-gender='" . $row['gender'] . "' 
+        data-dateofbirth='" . $row['date_of_birth'] . "'>";
 
         echo "<td>" . $row['id'] . "</td>";
         echo "<td>" . $row['clearance_type'] . "</td>";
@@ -42,6 +43,3 @@ if ($result->num_rows > 0) {
 } else {
     echo "<tr><td colspan='7'>No records found</td></tr>";
 }
-
-$conn->close();
-?>

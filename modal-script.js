@@ -3,37 +3,44 @@ function applyViewButtonListeners() {
 
   viewButtons.forEach(button => {
     button.addEventListener('click', function () {
-      // Get the closest table row to retrieve the relevant data
       const row = this.closest('tr');
       const lastName = row.getAttribute('data-lastname');
       const firstName = row.getAttribute('data-firstname');
       const middleName = row.getAttribute('data-middlename');
       const contactNum = row.getAttribute('data-contactnum');
       const purpose = row.getAttribute('data-purpose');
-      const address = row.getAttribute('data-address'); // Retrieve address
+      const address = row.getAttribute('data-address');
+      const civilStatus = row.getAttribute('data-civilstatus');
+      const placeOfBirth = row.getAttribute('data-placeofbirth');
+      const gender = row.getAttribute('data-gender');
+      const dateOfBirth = row.getAttribute('data-dateofbirth');
 
-      // Get modal elements
       const lastNameField = document.getElementById('lastName');
       const firstNameField = document.getElementById('firstName');
       const middleNameField = document.getElementById('middleName');
       const contactNumberField = document.getElementById('contactNumber');
       const purposeField = document.getElementById('purpose');
-      const addressField = document.getElementById('address'); // Get address field
+      const addressField = document.getElementById('address');
+      const civilStatusField = document.getElementById('civilStatus');
+      const placeOfBirthField = document.getElementById('placeOfBirth');
+      const genderField = document.getElementById('gender');
+      const dateOfBirthField = document.getElementById('dateOfBirth');
 
-      // Check if the modal elements exist before setting values
-      if (lastNameField && firstNameField && middleNameField && contactNumberField && purposeField && addressField) {
-        // Set the modal values
+      if (lastNameField && firstNameField && middleNameField && contactNumberField && purposeField && addressField && civilStatusField && placeOfBirthField && genderField && dateOfBirthField) {
         lastNameField.value = lastName;
         firstNameField.value = firstName;
         middleNameField.value = middleName;
         contactNumberField.value = contactNum;
         purposeField.value = purpose;
-        addressField.value = address; // Set the address value
+        addressField.value = address;
+        civilStatusField.value = civilStatus;
+        placeOfBirthField.value = placeOfBirth;
+        genderField.value = gender;
+        dateOfBirthField.value = dateOfBirth;
 
-        // Show the modal
         const modal = document.getElementById('manageDetailsModal');
         if (modal) {
-          modal.style.display = 'block'; // Show the modal
+          modal.style.display = 'block';
         }
       } else {
         console.error('Modal elements not found in the DOM');
@@ -185,44 +192,50 @@ function applyViewButtonListeners() {
 
   viewButtons.forEach(button => {
     button.addEventListener('click', function () {
-      // Get the closest table row to retrieve the relevant data
       const row = this.closest('tr');
       const lastName = row.getAttribute('data-lastname');
       const firstName = row.getAttribute('data-firstname');
       const middleName = row.getAttribute('data-middlename');
       const contactNum = row.getAttribute('data-contactnum');
       const purpose = row.getAttribute('data-purpose');
-      const address = row.getAttribute('data-address'); // Retrieve address
+      const address = row.getAttribute('data-address');
+      const civilStatus = row.getAttribute('data-civilstatus');
+      const placeOfBirth = row.getAttribute('data-placeofbirth');
+      const gender = row.getAttribute('data-gender');
+      const dateOfBirth = row.getAttribute('data-dateofbirth');
 
-      // Get modal elements
       const lastNameField = document.getElementById('lastName');
       const firstNameField = document.getElementById('firstName');
       const middleNameField = document.getElementById('middleName');
       const contactNumberField = document.getElementById('contactNumber');
       const purposeField = document.getElementById('purpose');
-      const addressField = document.getElementById('address'); // Get address field
+      const addressField = document.getElementById('address');
+      const civilStatusField = document.getElementById('civilStatus');
+      const placeOfBirthField = document.getElementById('placeOfBirth');
+      const genderField = document.getElementById('gender');
+      const dateOfBirthField = document.getElementById('dateOfBirth');
 
-      // Check if the modal elements exist before setting values
-      if (lastNameField && firstNameField && middleNameField && contactNumberField && purposeField && addressField) {
-        // Set the modal values
+      if (lastNameField && firstNameField && middleNameField && contactNumberField && purposeField && addressField && civilStatusField && placeOfBirthField && genderField && dateOfBirthField) {
         lastNameField.value = lastName;
         firstNameField.value = firstName;
         middleNameField.value = middleName;
         contactNumberField.value = contactNum;
         purposeField.value = purpose;
-        addressField.value = address; // Set the address value
+        addressField.value = address;
+        civilStatusField.value = civilStatus;
+        placeOfBirthField.value = placeOfBirth;
+        genderField.value = gender;
+        dateOfBirthField.value = dateOfBirth;
 
-        // Show the modal
         const modal = document.getElementById('manageDetailsModal');
         if (modal) {
-          modal.style.display = 'block'; // Show the modal
+          modal.style.display = 'block';
         }
       } else {
         console.error('Modal elements not found in the DOM');
       }
     });
   });
-
   applyApproveButtonListeners(); // Ensure approve buttons are set up as well
   applyRejectButtonListeners(); // Ensure reject buttons are set up as well
 }
